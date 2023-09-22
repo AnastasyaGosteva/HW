@@ -8,3 +8,13 @@
 # во входном файле грядки.
 
 
+count_bush  = int(input("Введите количество кустов: "))
+arr = list()
+for el in range(count_bush):
+    count_berry = int(input("Введите количество ягод на кусте: "))
+    arr.append(count_berry)
+
+arr_count = list()
+for i in range(len(arr)):
+       arr_count.append(arr[i-2] + arr[i-1] + arr[i])
+print(max(arr_count))
